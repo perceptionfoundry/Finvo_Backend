@@ -1,4 +1,18 @@
 # Finvo_Backend
+# uv commands:
+
+# To create a project (microservice) with uv
+uv init test_service
+
+# Now install packages or modules:
+uv add fastapi uvicorn
+
+# Check install packages:
+uv pip list
+
+# To run fastapi
+uv run -- uvicorn app.main:app --reload
+
 
 users-service/
 ├── app/
