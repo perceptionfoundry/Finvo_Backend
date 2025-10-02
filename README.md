@@ -34,12 +34,19 @@ users-service/
 │   ├── core/
 │   │   ├── config.py                   # Configurations, env vars
 │   │   └── auth.py                     # Clerk token verification, JWT helpers
+│   │   ├── settings.py
 │   ├── models/                         # DB models (SQLAlchemy, etc.)
 │   ├── utils/                          # Helpers/utilities (non-DI helpers)
 │   └── main.py                        # FastAPI app entrypoint, include routers here
 ├── tests/                             # Unit & integration tests
-│   └── test_users.py
+│   └── unit/
+│   |   └── test_user_service.py
+│   └── integration/
+│   |   └── test_users_endpoint.py
 ├── .env                              # Environment variables
+├── .env.example
 ├── Dockerfile                        # Docker config for containerization
-├── requirements.txt                  # Python dependencies
+├── pyproject.toml                    # Python dependencies
+├── .python-version
+├── uv.lock
 └── README.md                        # Documentation
