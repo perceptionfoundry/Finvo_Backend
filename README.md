@@ -50,3 +50,45 @@ users-service/
 ├── .python-version
 ├── uv.lock
 └── README.md                        # Documentation
+
+
+
+Another project structure:
+app/
+├── api/                # All API routers (versioned)
+│   ├── v1/
+│   │   ├── routes/
+│   │   │   ├── users.py
+│   │   │   └── auth.py
+│   │   └── dependencies/
+│   │       └── auth.py
+│   └── v2/             # Future version
+│
+├── core/               # App-level configs and core logic
+│   ├── config.py       # Settings (env, DB URL, etc.)
+│   ├── security.py     # JWT / OAuth2 logic
+│   └── logging.py      # Logging configuration
+│
+├── models/             # SQLAlchemy or Pydantic models
+│   ├── domain/         # SQLAlchemy DB models
+│   └── schemas/        # Pydantic schemas for request/response
+│
+├── services/           # Business logic
+│   ├── user_service.py
+│   └── auth_service.py
+│
+├── repository/         # Data access layer (DB queries)
+│   ├── user_repo.py
+│   └── base.py
+│
+├── db/                 # Database initialization and session
+│   ├── base_class.py
+│   ├── session.py
+│   └── migrations/     # Alembic migrations
+│
+├── tests/              # Unit and integration tests
+│   ├── unit/
+│   └── integration/
+│
+├── main.py             # Entry point
+└── asgi.py             # For ASGI servers like Uvicorn/Gunicorn
