@@ -3,7 +3,8 @@
 import httpx
 from jose import jwt
 from fastapi import Request, HTTPException, Depends, status
-from app.core.config import settings
+from app.core.config import get_settings
+settings = get_settings()
 
 async def get_current_user(request: Request):
     auth_header = request.headers.get("authorization")
