@@ -1,0 +1,17 @@
+[project]
+name = "finvo-user-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.5",
+    "asyncpg>=0.30.0",
+    "fastapi>=0.118.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.11.10",
+    "python-dotenv>=1.1.1",
+    "python-jose[cryptography]>=3.5.0",
+    "sqlalchemy[asyncio]>=2.0.43",
+    "uvicorn[standard]>=0.37.0",
+]
